@@ -34,7 +34,7 @@ sudo apt install -f
 
 echo "Download and install Latte Dock"
 cd /tmp
-wget -c https://raw.githubusercontent.com/varlesh/neon-afterinstall/master/latte-dock_0.7.1+p16.04+git20171020.0025-0_amd64.deb
+wget -c https://raw.githubusercontent.com/varlesh/neon-afterinstall/master/latte-dock_0.7.1+p16.04+git20171108.0157-0_amd64.deb
 sudo dpkg -i latte*.deb
 sudo apt install -f
 
@@ -50,7 +50,10 @@ sudo apt install lm-sensors p7zip-full cantata qbittorrent kate muon apt-xapian-
 
 echo "Install dev tools"
 cd /tmp
-sudo apt install dput dh-make devscripts gnome-keyring npm nodejs-legacy git curl gimp inkscape kcolorchooser imagemagick
+sudo apt install dput dh-make devscripts gnome-keyring git curl gimp inkscape kcolorchooser imagemagick
+sudo apt-get purge nodejs npm
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 sudo npm install -g npm svgo
 
 echo "Install widgets"
@@ -58,9 +61,9 @@ cd /tmp
 wget -c https://dl.opendesktop.org/api/files/download/id/1487367255/rss-indicator-v0.1.6.plasmoid
 wget -c https://dl.opendesktop.org/api/files/download/id/1503273190/plasma-applet-thermal-monitor.plasmoid
 wget -c https://dl.opendesktop.org/api/files/download/id/1499544340/netspeed-widget-1.4.plasmoid
-wget -c https://dl.opendesktop.org/api/files/download/id/1500418988/eventcalendar-v48-plasma5.6.plasmoid
-wget -c https://dl.opendesktop.org/api/files/download/id/1506276968/simplemenu-1.0.3.plasmoid
-plasmapkg2 *.plasmoid
+wget -c https://dl.opendesktop.org/api/files/download/id/1509159451/eventcalendar-v50-plasma5.6.plasmoid
+wget -c https://dl.opendesktop.org/api/files/download/id/1509532288/simplemenu-1.0.4.plasmoid
+plasmapkg2 -i *.plasmoid
 
 echo "Apply new icon theme"
 sed -i s/Theme=breeze/Theme=Papirus-Adapta-Nokto/g ~/.config/kdeglobals
