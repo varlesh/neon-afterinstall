@@ -33,19 +33,19 @@ sudo dpkg -i smartgit-*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Add PPA's"; tput sgr0
-sudo add-apt -y-repository ppa:andreas-angerer89/sni-qt-patched
-sudo add-apt -y-repository ppa:varlesh-l/ubuntu-tools
-sudo add-apt -y-repository ppa:papirus/papirus
+sudo add-apt-repository -y ppa:andreas-angerer89/sni-qt-patched
+sudo add-apt-repository -y ppa:varlesh-l/ubuntu-tools
+sudo add-apt-repository -y ppa:papirus/papirus
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
-sudo apt -y install latte-dock lm-sensors p7zip-full clementine qbittorrent kate muon apt -y-xapian-index caffeine arc-theme arc-kde adapta-gtk-theme adapta-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake qml-module-qtquick-localstorage
+sudo apt -y install latte-dock lm-sensors p7zip-full clementine qbittorrent kate muon apt-xapian-index caffeine arc-theme arc-kde adapta-gtk-theme adapta-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake qml-module-qtquick-localstorage
 
 echo -e "${COLOR}Install dev tools"; tput sgr0
 sudo apt -y install dput dh-make devscripts gnome-keyring git curl gimp inkscape kcolorchooser imagemagick
-sudo apt -y-get purge nodejs npm
+sudo apt -y purge nodejs npm
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt -y-get install -y nodejs
+sudo apt -y install nodejs
 sudo npm install -g npm svgo
 
 echo -e "${COLOR}Ddownload and install widgets"; tput sgr0
