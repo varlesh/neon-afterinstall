@@ -47,7 +47,7 @@ sudo apt -y update
 
 echo -e "${COLOR}Install packages"
 tput sgr0
-sudo apt -y install latte-dock lm-sensors p7zip-full clementine qbittorrent kate muon apt -y-xapian-index caffeine arc-theme arc-kde adapt -ya-gtk-theme adapt -ya-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake
+sudo apt -y install latte-dock lm-sensors p7zip-full clementine qbittorrent kate muon apt -y-xapian-index caffeine arc-theme arc-kde adapt -ya-gtk-theme adapt -ya-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake qml-module-qtquick-localstorage
 
 echo -e "${COLOR}Install dev tools"
 tput sgr0
