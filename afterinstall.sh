@@ -39,7 +39,7 @@ sudo add-apt-repository -y ppa:papirus/papirus
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
-sudo apt -y install latte-dock lm-sensors p7zip-full clementine qbittorrent kate muon apt-xapian-index caffeine arc-theme arc-kde adapta-gtk-theme adapta-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake qml-module-qtquick-localstorage
+sudo apt -y install latte-dock lm-sensors p7zip-full qmmp qbittorrent kate muon apt-xapian-index caffeine arc-theme arc-kde adapta-gtk-theme adapta-kde kvantum papirus-icon-theme hardcode-tray sni-qt dnsmasq plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed ubuntu-restricted-extras phonon-backend-gstreamer phonon4qt5-backend-gstreamer gstreamer1.0-libav sox libqt5quick5 yakuake qml-module-qtquick-localstorage
 
 echo -e "${COLOR}Install dev tools"; tput sgr0
 sudo apt -y install dput dh-make devscripts gnome-keyring git curl gimp inkscape kcolorchooser imagemagick
@@ -53,13 +53,13 @@ wget -c https://dl.opendesktop.org/api/files/download/id/1487367255/rss-indicato
 wget -c https://dl.opendesktop.org/api/files/download/id/1503273190/plasma-applet-thermal-monitor.plasmoid
 wget -c https://dl.opendesktop.org/api/files/download/id/1499544340/netspeed-widget-1.4.plasmoid
 wget -c https://dl.opendesktop.org/api/files/download/id/1509159451/eventcalendar-v50-plasma5.6.plasmoid
-wget -c https://dl.opendesktop.org/api/files/download/id/1509532288/simplemenu-1.0.4.plasmoid
+wget -c https://dl.opendesktop.org/api/files/download/id/1512214009/simplemenu-1.0.7.plasmoid
 wget -c https://dl.opendesktop.org/api/files/download/id/1491427786/commandoutput-v3.plasmoid
 plasmapkg2 -i rss-indicator-v0.1.6.plasmoid
 plasmapkg2 -i plasma-applet-thermal-monitor.plasmoid
 plasmapkg2 -i netspeed-widget-1.4.plasmoid
 plasmapkg2 -i eventcalendar-v50-plasma5.6.plasmoid
-plasmapkg2 -i simplemenu-1.0.4.plasmoid
+plasmapkg2 -i simplemenu-1.0.7.plasmoid
 plasmapkg2 -i commandoutput-v3.plasmoid
 
 echo -e "${COLOR}Apply new icon theme"; tput sgr0
