@@ -49,7 +49,7 @@ sudo npm install -g npm svgo
 
 echo -e "${COLOR}Download and install widgets"; tput sgr0
 git clone https://github.com/varlesh/neon-afterinstall.git
-cd widgets
+cd /tmp/neon-afterinstall/widgets
 plasmapkg2 -i rss-indicator*.plasmoid
 plasmapkg2 -i plasma-applet-thermal-monitor.plasmoid
 plasmapkg2 -i netspeed-widget*.plasmoid
@@ -58,7 +58,7 @@ plasmapkg2 -i simplemenu*.plasmoid
 plasmapkg2 -i commandoutput*.plasmoid
 cat AUTHORS
 sleep 5
-cd ..
+cd /tmp
 
 echo -e "${COLOR}Apply new icon theme"; tput sgr0
 sed -i s/Theme=breeze/Theme=Papirus-Dark/g ~/.config/kdeglobals
@@ -72,12 +72,15 @@ sudo -E hardcode-tray -s 22 -ct RSVGConvert --theme Papirus-Dark -a
 
 echo -e "${COLOR}Fix hardcode apps icons"; tput sgr0
 wget https://raw.githubusercontent.com/Foggalong/hardcode-fixer/master/fix.sh
+chmod +x fix.sh 
 sudo bash fix.sh
 
 echo -e "${COLOR}Fix StartupWMClass"; tput sgr0
 wget https://raw.githubusercontent.com/bil-elmoussaoui/StartupWMClassFixer/master/fix
+chmod +x fix
 sudo bash fix
 cd
 sleep 3
 
 kdialog --passivepopup "KDE Neon After Install Finished!" --icon "kde" 10
+play /usr/share/sounds/freedesktop/stereo/complete.oga
