@@ -47,7 +47,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt -y install nodejs
 sudo npm install -g npm svgo
 
-echo -e "${COLOR}Ddownload and install widgets"; tput sgr0
+echo -e "${COLOR}Download and install widgets"; tput sgr0
 git clone https://github.com/varlesh/neon-afterinstall.git
 cd widgets
 plasmapkg2 -i rss-indicator*.plasmoid
@@ -56,6 +56,8 @@ plasmapkg2 -i netspeed-widget*.plasmoid
 plasmapkg2 -i eventcalendar*.plasmoid
 plasmapkg2 -i simplemenu*.plasmoid
 plasmapkg2 -i commandoutput*.plasmoid
+cat AUTHORS
+sleep 5
 cd ..
 
 echo -e "${COLOR}Apply new icon theme"; tput sgr0
