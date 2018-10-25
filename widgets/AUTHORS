@@ -1,0 +1,25 @@
+List AUTHORS of widgets:
+
+Package: Command Output
+Author: Chris Holland 
+Sources: https://github.com/Zren/plasma-applet-commandoutput
+
+Package: Event Calendar
+Author: Chris Holland 
+Sources: https://github.com/Zren/plasma-applet-eventcalendar
+
+Package: Netspeed Widget
+Author: Daniel Faust
+Sources: https://github.com/dfaust/plasma-applet-netspeed-widget
+
+Package: Thermal Monitor
+Author: Kotelnik
+Sources: https://github.com/kotelnik/plasma-applet-thermal-monitor
+
+Package: RSS Indicator
+Author: Junpeng Qiu
+Sources: https://github.com/cute-jumper/plasma-rss-indicator
+
+Package: Simple Menu
+Author: Eike Hein
+Sources: https://www.opendesktop.org/p/1169537/

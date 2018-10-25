@@ -1,2 +1,2 @@
 # neon-afterinstall
-After install script for KDE Neon UE
+My after install script for KDE Neon UE
