@@ -1,5 +1,5 @@
 #!/bin/bash
-export COLOR="\[\033[0;32m\]"
+export COLOR="\e[32m"
 
 echo -e "${COLOR}Remove packages"; tput sgr0
 cd /tmp
@@ -64,12 +64,6 @@ sed -i s/Theme=breeze/Theme=Papirus-Dark/g ~/.config/kdeglobals
 echo -e "${COLOR}Clear system cache"; tput sgr0
 rm -rf ~/.cache/plasm* ~/.cache/ico*
 sudo apt -y clean
-
-echo -e "${COLOR}Restart Plasma Desktop"; tput sgr0
-kquitapp5 plasmashell
-sleep 3
-kstart5 plasmashell
-sleep 3
 
 echo -e "${COLOR}Fix hardcode tray icons"; tput sgr0
 sudo -E hardcode-tray -s 22 -ct RSVGConvert --theme Papirus-Dark -a
