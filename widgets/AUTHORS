@@ -20,6 +20,6 @@ Package: RSS Indicator
 Author: Junpeng Qiu
 Sources: https://github.com/cute-jumper/plasma-rss-indicator
 
-Package: Simple Menu
-Author: Eike Hein
-Sources: https://www.opendesktop.org/p/1169537/
+Package: Minimal Menu
+Author: Juha Nuutinen
+Sources: https://gitlab.com/jnuutinen/minimal-menu
