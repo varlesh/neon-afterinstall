@@ -29,7 +29,7 @@ sudo apt -y install -f
 
 echo -e "${COLOR}Download and install GitHub Desktop"; tput sgr0
 wget -c https://github.com/shiftkey/desktop/releases/download/release-1.6.0-linux1/GitHubDesktop-linux-1.6.0-linux1.deb
-sudo dpkg -i GitHub-*.deb
+sudo dpkg -i GitHubDesktop*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Add PPA's"; tput sgr0
