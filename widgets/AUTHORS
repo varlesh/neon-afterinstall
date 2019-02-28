@@ -12,10 +12,6 @@ Package: Netspeed Widget
 Author: Daniel Faust
 Sources: https://github.com/dfaust/plasma-applet-netspeed-widget
 
-Package: Thermal Monitor
-Author: Kotelnik
-Sources: https://github.com/kotelnik/plasma-applet-thermal-monitor
-
 Package: RSS Indicator
 Author: Junpeng Qiu
 Sources: https://github.com/cute-jumper/plasma-rss-indicator

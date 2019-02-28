@@ -16,19 +16,19 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install Telegram"; tput sgr0
-wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.5.4/tsetup.1.5.4.tar.xz
+wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.5.15/tsetup.1.5.15.tar.xz
 tar -xf tsetup*
 mkdir -p ~/.local/share/TelegramDesktop/
 cp -R Telegram ~/.local/share/TelegramDesktop/
 timeout 20s ~/.local/share/TelegramDesktop/Telegram/Telegram
 
 echo -e "${COLOR}Download and install Mellow Player"; tput sgr0
-wget -c http://widehat.opensuse.org/opensuse/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.0-1_amd64.deb
+wget -c http://widehat.opensuse.org/opensuse/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.2-1_amd64.deb
 sudo dpkg -i mellowplayer*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install GitHub Desktop"; tput sgr0
-wget -c https://github.com/shiftkey/desktop/releases/download/release-1.6.0-linux1/GitHubDesktop-linux-1.6.0-linux1.deb
+wget -c https://github.com/shiftkey/desktop/releases/download/release-1.6.2-linux1/GitHubDesktop-linux-1.6.2-linux1.deb
 sudo dpkg -i GitHubDesktop*.deb
 sudo apt -y install -f
 
@@ -38,7 +38,7 @@ sudo add-apt-repository -y ppa:papirus/papirus
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
-sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt4-style-kvantum qt5-style-kvantum papirus-icon-theme materia-kde materia-gtk-theme hardcode-tray sni-qt plasma-applet-weather-widget plasma-widget-playbar2 plasma-widget-gmailfeed sox libqt5quick5 yakuake qml-module-qtquick-localstorage
+sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt4-style-kvantum qt5-style-kvantum papirus-icon-theme materia-kde materia-gtk-theme hardcode-tray sni-qt plasma-applet-weather-widget plasma-applet-thermal-monitor plasma-widget-playbar2 plasma-widget-gmailfeed sox libqt5quick5 yakuake qml-module-qtquick-localstorage
 
 echo -e "${COLOR}Install dev tools"; tput sgr0
 sudo apt -y install dput dh-make devscripts gnome-keyring curl gimp inkscape kcolorchooser imagemagick
@@ -51,7 +51,6 @@ echo -e "${COLOR}Download and install widgets"; tput sgr0
 git clone https://github.com/varlesh/neon-afterinstall.git
 cd /tmp/neon-afterinstall/widgets
 plasmapkg2 -i rss-indicator*.plasmoid
-plasmapkg2 -i plasma-applet-thermal-monitor.plasmoid
 plasmapkg2 -i netspeed-widget*.plasmoid
 plasmapkg2 -i eventcalendar*.plasmoid
 plasmapkg2 -i minimalmenu*.plasmoid
