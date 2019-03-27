@@ -16,25 +16,26 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install Telegram"; tput sgr0
-wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.5.15/tsetup.1.5.15.tar.xz
+wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.6.3/tsetup.1.6.3.tar.xz
 tar -xf tsetup*
 mkdir -p ~/.local/share/TelegramDesktop/
 cp -R Telegram ~/.local/share/TelegramDesktop/
 timeout 20s ~/.local/share/TelegramDesktop/Telegram/Telegram
 
 echo -e "${COLOR}Download and install Mellow Player"; tput sgr0
-wget -c http://widehat.opensuse.org/opensuse/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.2-1_amd64.deb
+wget -c http://widehat.opensuse.org/opensuse/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.3-1_amd64.deb
 sudo dpkg -i mellowplayer*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install GitHub Desktop"; tput sgr0
-wget -c https://github.com/shiftkey/desktop/releases/download/release-1.6.2-linux1/GitHubDesktop-linux-1.6.2-linux1.deb
+wget -c https://github.com/shiftkey/desktop/releases/download/release-1.6.5-linux2/GitHubDesktop-linux-1.6.5-linux2.deb
 sudo dpkg -i GitHubDesktop*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Add PPA's"; tput sgr0
 sudo add-apt-repository -y ppa:varlesh-l/bionic
 sudo add-apt-repository -y ppa:papirus/papirus
+sudo add-apt-repository -y ppa:papirus/hardcode-tray
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
