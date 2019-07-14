@@ -15,19 +15,19 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install Telegram"; tput sgr0
-wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.7.7/tsetup.1.7.7.tar.xz
+wget -c https://github.com/telegramdesktop/tdesktop/releases/download/v1.7.14/tsetup.1.7.14.tar.xz
 tar -xf tsetup*
 mkdir -p ~/.local/share/TelegramDesktop/
 cp -R Telegram ~/.local/share/TelegramDesktop/
 timeout 20s ~/.local/share/TelegramDesktop/Telegram/Telegram
 
 echo -e "${COLOR}Download and install Mellow Player"; tput sgr0
-wget -c http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.4-1_amd64.deb
+wget -c http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_18.04/amd64/mellowplayer_3.5.5-1_amd64.deb
 sudo dpkg -i mellowplayer*.deb
 sudo apt -y install -f
 
 echo -e "${COLOR}Download and install GitHub Desktop"; tput sgr0
-wget -c https://github.com/shiftkey/desktop/releases/download/release-2.0.4-linux1/GitHubDesktop-linux-2.0.4-linux1.deb
+wget -c https://github.com/shiftkey/desktop/releases/download/release-2.1.0-linux1/GitHubDesktop-linux-2.1.0-linux1.deb
 sudo dpkg -i GitHubDesktop*.deb
 sudo apt -y install -f
 
@@ -54,6 +54,10 @@ plasmapkg2 -i netspeed-widget*.plasmoid
 plasmapkg2 -i eventcalendar*.plasmoid
 plasmapkg2 -i minimalmenu*.plasmoid
 plasmapkg2 -i commandoutput*.plasmoid
+plasmapkg2 -i org.kde.latte.analogclock.plasmoid
+plasmapkg2 -i org.kde.plasma.calendar.wl.plasmoid
+plasmapkg2 -i org.kde.plasma.digitalclock.wl.plasmoid
+
 cat AUTHORS
 sleep 5
 cd /tmp

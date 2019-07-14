@@ -19,3 +19,7 @@ Sources: https://github.com/cute-jumper/plasma-rss-indicator
 Package: Minimal Menu
 Author: Juha Nuutinen
 Sources: https://gitlab.com/jnuutinen/minimal-menu
+
+Package: Latte Analog Clock
+Author: Michail Vourlakos
+Sources: https://github.com/psifidotos/applet-latte-analogclock
