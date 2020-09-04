@@ -26,6 +26,13 @@ wget -c http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_2
 sudo dpkg -i mellowplayer*.deb
 sudo apt -y install -f
 
+echo -e "${COLOR}Download and install Jellyfin"; tput sgr0
+wget -c https://repo.jellyfin.org/releases/server/ubuntu/stable/server/jellyfin-server_10.6.4-1_amd64.deb
+wget -c https://repo.jellyfin.org/releases/server/ubuntu/stable/web/jellyfin-web_10.6.4-1_all.deb
+wget -c https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v4.3.1-1/jellyfin-ffmpeg_4.2.1-7-focal_amd64.deb
+sudo dpkg -i jellyfin*.deb
+sudo apt -y install -f
+
 echo -e "${COLOR}Download and install GitHub Desktop"; tput sgr0
 wget -c https://github.com/shiftkey/desktop/releases/download/release-2.5.4-linux1/GitHubDesktop-linux-2.5.4-linux1.deb
 sudo dpkg -i GitHubDesktop*.deb
