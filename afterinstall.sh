@@ -63,6 +63,7 @@ plasmapkg2 -i minimalmenu*.plasmoid
 plasmapkg2 -i commandoutput*.plasmoid
 plasmapkg2 -i org.kde.plasma.calendar.wl.plasmoid
 plasmapkg2 -i org.kde.plasma.digitalclock.wl.plasmoid
+plasmapkg2 -i org.kde.plasma.advancedradio.plasmoid
 
 cat AUTHORS
 sleep 5

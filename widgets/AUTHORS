@@ -19,3 +19,7 @@ Sources: https://github.com/cute-jumper/plasma-rss-indicator
 Package: Minimal Menu
 Author: Juha Nuutinen
 Sources: https://gitlab.com/jnuutinen/minimal-menu
+
+Package: Advanced Radio Player
+Author: Yuriy (Dr_i-glu4IT) Saurov
+Sources: https://www.opendesktop.org/p/1313987/
