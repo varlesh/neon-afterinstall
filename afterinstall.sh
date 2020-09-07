@@ -1,13 +1,17 @@
 #!/bin/bash
+# For KDE Neon UE (Ubuntu 20.04)
 export COLOR="\e[32m"
 
 echo -e "${COLOR}Remove packages"; tput sgr0
-sudo apt -y purge firefox* kwrite vim
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin
 sudo apt -y autoremove
 
 echo -e "${COLOR}Upgrade system"; tput sgr0
 sudo apt -y update
 sudo apt -y dist-upgrade
+
+echo -e "${COLOR}Install drivers"; tput sgr0
+sudo ubuntu-drivers install
 
 echo -e "${COLOR}Download and install Google Chrome"; tput sgr0
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -45,14 +49,24 @@ sudo add-apt-repository -y ppa:papirus/hardcode-tray
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
-sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt5-style-kvantum papirus-icon-theme materia-kde materia-gtk-theme hardcode-tray plasma-applet-weather-widget plasma-applet-thermal-monitor plasma-widget-playbar2 sox libqt5quick5 yakuake qml-module-qtquick-localstorage
+sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt5-style-kvantum materia-gtk-theme hardcode-tray plasma-applet-weather-widget plasma-applet-thermal-monitor plasma-widget-playbar2 sox libqt5quick5 yakuake qml-module-qtquick-localstorage
 
 echo -e "${COLOR}Install dev tools"; tput sgr0
 sudo apt -y install dput dh-make devscripts gnome-keyring curl gimp inkscape kcolorchooser imagemagick
 sudo apt -y purge nodejs npm
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt -y install nodejs
-sudo npm install -g npm svgo
+sudo npm install -g npm svgo asar
+
+echo -e "${COLOR}Install Papirus Icon Theme"; tput sgr0
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+
+echo -e "${COLOR}Install Materia KDE"; tput sgr0
+cd /tmp
+git clone https://github.com/PapirusDevelopmentTeam/materia-kde.git
+cd materia-kde
+make PREFIX=~/.local install
+mv ~/.local/share/Kvantum ~/.config/
 
 echo -e "${COLOR}Download and install widgets"; tput sgr0
 cd /tmp/neon-afterinstall/widgets
