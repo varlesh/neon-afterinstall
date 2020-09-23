@@ -3,7 +3,7 @@
 export COLOR="\e[32m"
 
 echo -e "${COLOR}Remove packages"; tput sgr0
-sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin
+sudo apt -y purge firefox kwrite vim kwalletmanager libkf5wallet-bin vlc
 sudo apt -y autoremove
 
 echo -e "${COLOR}Upgrade system"; tput sgr0
@@ -25,8 +25,12 @@ mkdir -p ~/.local/share/TelegramDesktop/
 cp -R Telegram ~/.local/share/TelegramDesktop/
 timeout 20s ~/.local/share/TelegramDesktop/Telegram/Telegram
 
+echo -e "${COLOR}Fix Telegram tray icons"; tput sgr0
+echo "export TDESKTOP_FORCE_PANEL_ICON=1" >> ~/.profile
+echo "export TDESKTOP_DISABLE_TRAY_COUNTER=1" >> ~/.profile
+
 echo -e "${COLOR}Download and install Mellow Player"; tput sgr0
-wget -c http://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_20.04/amd64/mellowplayer_3.6.5-0_amd64.deb
+wget -c https://download.opensuse.org/repositories/home:/ColinDuquesnoy/xUbuntu_20.04/amd64/mellowplayer_3.6.6-0_amd64.deb
 sudo dpkg -i mellowplayer*.deb
 sudo apt -y install -f
 
@@ -49,7 +53,7 @@ sudo add-apt-repository -y ppa:papirus/hardcode-tray
 sudo apt -y update
 
 echo -e "${COLOR}Install packages"; tput sgr0
-sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt5-style-kvantum materia-gtk-theme hardcode-tray plasma-applet-weather-widget plasma-applet-thermal-monitor plasma-widget-playbar2 sox libqt5quick5 yakuake qml-module-qtquick-localstorage
+sudo apt -y install git latte-dock lm-sensors p7zip-full qbittorrent kate muon qapt-deb-installer apt-xapian-index qt5-style-kvantum materia-gtk-theme hardcode-tray plasma-applet-weather-widget plasma-applet-thermal-monitor plasma-widget-playbar2 sox libqt5quick5 yakuake qml-module-qtquick-localstorage bomi
 
 echo -e "${COLOR}Install dev tools"; tput sgr0
 sudo apt -y install dput dh-make devscripts gnome-keyring curl gimp inkscape kcolorchooser imagemagick
@@ -57,6 +61,12 @@ sudo apt -y purge nodejs npm
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt -y install nodejs
 sudo npm install -g npm svgo asar
+
+echo -e "${COLOR}Install bomi skin Native Mini"; tput sgr0
+cd /tmp
+git clone https://github.com/varlesh/bomi-skin-native-mini.git
+cd bomi-skin-native-mini
+sudo make install
 
 echo -e "${COLOR}Install Papirus Icon Theme"; tput sgr0
 wget -qO- https://git.io/papirus-icon-theme-install | sh
